@@ -14,8 +14,8 @@ const BlogItem = ({ blog }: IBlogItemProps) => {
             <div className="w-16 aspect-square bg-slate-200">
                 <img src={image} alt={title} className="object-cover object-center w-full h-full" />
             </div>
-            <div className="flex-1">
-                <h3 className="mb-1 text-xl font-medium line-clamp-3 leading-[20px]">
+            <div className="flex-1 relative -mt-1">
+                <h3 className="mb-1 text-xl font-medium line-clamp-3">
                     <Link to={ROUTERS.DETAIL_BLOG.replace(':id', String(id))}>{title}</Link>
                 </h3>
 
