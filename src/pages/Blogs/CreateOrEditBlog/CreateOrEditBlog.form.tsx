@@ -43,6 +43,8 @@ const CreateOrEditBlogForm = ({ blog }: ICreateOrEditBlogFormProps) => {
                     showToastSuccess(params?.id ? 'Edit success' : 'Create success');
                     navigate(-1);
                     reset();
+                } else {
+                    showToastError(params?.id ? 'Edit failure' : 'Create failure');
                 }
             } catch (error) {
                 showToastError();
