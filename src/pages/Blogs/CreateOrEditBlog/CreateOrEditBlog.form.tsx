@@ -67,18 +67,21 @@ const CreateOrEditBlogForm = ({ blog }: ICreateOrEditBlogFormProps) => {
                         placeholder="Enter title"
                         type="text"
                         errorName={errors?.title?.message && String(errors?.title?.message)}
+                        title="Title"
                     />
                     <FormInput
                         register={register('content')}
                         placeholder="Enter content"
                         type="textarea"
                         errorName={errors?.content?.message && String(errors?.content?.message)}
+                        title="Content"
                     />
                     <FormInput
                         register={register('image')}
                         placeholder="Enter image link"
                         type="text"
                         errorName={errors?.image?.message && String(errors?.image?.message)}
+                        title="Image URL"
                     />
                 </div>
                 <button

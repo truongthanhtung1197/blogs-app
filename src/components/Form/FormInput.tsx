@@ -9,6 +9,7 @@ interface IFormInputProps {
     type?: 'text' | 'number' | 'email' | 'textarea';
     register: any;
     errorName?: string;
+    title?: string;
 }
 
 const FormInput = ({
@@ -16,10 +17,12 @@ const FormInput = ({
     placeholder = 'Name',
     type = 'text',
     register,
-    errorName
+    errorName,
+    title
 }: IFormInputProps) => {
     return (
         <div>
+            {title && <div className="font-semibold text-base text-primaryText">{title}</div>}
             {type === 'textarea' ? (
                 <textarea
                     {...register}
